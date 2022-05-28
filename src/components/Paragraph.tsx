@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text } from './Text';
-import { VariantProps, CSS } from '../stitches.config';
+import { VariantProps, CSS } from 'stitches.config';
 import merge from 'lodash.merge';
 
 const DEFAULT_TAG = 'p';
@@ -8,8 +8,7 @@ const DEFAULT_TAG = 'p';
 type TextSizeVariants = Pick<VariantProps<typeof Text>, 'size'>;
 type ParagraphSizeVariants = '1' | '2';
 type ParagraphVariants = { size?: ParagraphSizeVariants } & Omit<VariantProps<typeof Text>, 'size'>;
-type ParagraphProps = React.ComponentProps<typeof DEFAULT_TAG> &
-  ParagraphVariants & { css?: CSS; as?: any };
+type ParagraphProps = React.ComponentProps<typeof DEFAULT_TAG> & ParagraphVariants & { css?: CSS; as?: any };
 
 export const Paragraph = React.forwardRef<React.ElementRef<typeof DEFAULT_TAG>, ParagraphProps>(
   (props, forwardedRef) => {
@@ -38,5 +37,5 @@ export const Paragraph = React.forwardRef<React.ElementRef<typeof DEFAULT_TAG>, 
         }}
       />
     );
-  }
+  },
 );

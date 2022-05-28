@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled, keyframes, VariantProps, CSS } from '../stitches.config';
+import { styled, keyframes, VariantProps, CSS } from 'stitches.config';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
 import { Cross1Icon } from '@radix-ui/react-icons';
 import { overlayStyles } from './Overlay';
@@ -117,19 +117,18 @@ type SheetContentVariants = VariantProps<typeof StyledContent>;
 type DialogContentPrimitiveProps = React.ComponentProps<typeof DialogPrimitive.Content>;
 type SheetContentProps = DialogContentPrimitiveProps & SheetContentVariants & { css?: CSS };
 
-export const SheetContent = React.forwardRef<
-  React.ElementRef<typeof StyledContent>,
-  SheetContentProps
->(({ children, ...props }, forwardedRef) => (
-  <StyledContent {...props} ref={forwardedRef}>
-    {children}
-    <StyledCloseButton asChild>
-      <IconButton variant="ghost">
-        <Cross1Icon />
-      </IconButton>
-    </StyledCloseButton>
-  </StyledContent>
-));
+export const SheetContent = React.forwardRef<React.ElementRef<typeof StyledContent>, SheetContentProps>(
+  ({ children, ...props }, forwardedRef) => (
+    <StyledContent {...props} ref={forwardedRef}>
+      {children}
+      <StyledCloseButton asChild>
+        <IconButton variant="ghost">
+          <Cross1Icon />
+        </IconButton>
+      </StyledCloseButton>
+    </StyledContent>
+  ),
+);
 
 export const SheetTrigger = DialogPrimitive.Trigger;
 export const SheetClose = DialogPrimitive.Close;

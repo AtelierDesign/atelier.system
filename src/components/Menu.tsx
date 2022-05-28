@@ -1,7 +1,7 @@
 import React from 'react';
 import * as MenuPrimitive from '@radix-ui/react-menu';
 import { CheckIcon } from '@radix-ui/react-icons';
-import { styled, css, CSS } from '../stitches.config';
+import { styled, css, CSS } from 'stitches.config';
 import { Box } from './Box';
 import { Flex } from './Flex';
 import { panelStyles } from './Panel';
@@ -64,28 +64,27 @@ const StyledMenuRadioItem = styled(MenuPrimitive.RadioItem, itemCss);
 type MenuRadioItemPrimitiveProps = React.ComponentProps<typeof MenuPrimitive.RadioItem>;
 type MenuRadioItemProps = MenuRadioItemPrimitiveProps & { css?: CSS };
 
-export const MenuRadioItem = React.forwardRef<
-  React.ElementRef<typeof StyledMenuRadioItem>,
-  MenuRadioItemProps
->(({ children, ...props }, forwardedRef) => (
-  <StyledMenuRadioItem {...props} ref={forwardedRef}>
-    <Box as="span" css={{ position: 'absolute', left: '$1' }}>
-      <MenuPrimitive.ItemIndicator>
-        <Flex css={{ width: '$3', height: '$3', alignItems: 'center', justifyContent: 'center' }}>
-          <Box
-            css={{
-              width: '$1',
-              height: '$1',
-              backgroundColor: 'currentColor',
-              borderRadius: '$round',
-            }}
-          ></Box>
-        </Flex>
-      </MenuPrimitive.ItemIndicator>
-    </Box>
-    {children}
-  </StyledMenuRadioItem>
-));
+export const MenuRadioItem = React.forwardRef<React.ElementRef<typeof StyledMenuRadioItem>, MenuRadioItemProps>(
+  ({ children, ...props }, forwardedRef) => (
+    <StyledMenuRadioItem {...props} ref={forwardedRef}>
+      <Box as="span" css={{ position: 'absolute', left: '$1' }}>
+        <MenuPrimitive.ItemIndicator>
+          <Flex css={{ width: '$3', height: '$3', alignItems: 'center', justifyContent: 'center' }}>
+            <Box
+              css={{
+                width: '$1',
+                height: '$1',
+                backgroundColor: 'currentColor',
+                borderRadius: '$round',
+              }}
+            ></Box>
+          </Flex>
+        </MenuPrimitive.ItemIndicator>
+      </Box>
+      {children}
+    </StyledMenuRadioItem>
+  ),
+);
 
 const StyledMenuCheckboxItem = styled(MenuPrimitive.CheckboxItem, itemCss);
 

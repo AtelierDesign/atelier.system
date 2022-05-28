@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled, keyframes, CSS, VariantProps } from '../stitches.config';
+import { styled, keyframes, CSS, VariantProps } from 'stitches.config';
 import * as ProgressPrimitive from '@radix-ui/react-progress';
 
 const indeterminateProgress = keyframes({
@@ -78,15 +78,14 @@ type ProgressBarVariants = VariantProps<typeof StyledProgressBar>;
 type ProgressBarPrimitiveProps = React.ComponentProps<typeof ProgressPrimitive.Root>;
 type ProgressBarProps = ProgressBarPrimitiveProps & ProgressBarVariants & { css?: CSS };
 
-export const ProgressBar = React.forwardRef<
-  React.ElementRef<typeof StyledProgressBar>,
-  ProgressBarProps
->(({ value, max = 100, ...props }, forwardedRef) => {
-  const percentage = value != null ? Math.round((value / max) * 100) : null;
+export const ProgressBar = React.forwardRef<React.ElementRef<typeof StyledProgressBar>, ProgressBarProps>(
+  ({ value, max = 100, ...props }, forwardedRef) => {
+    const percentage = value != null ? Math.round((value / max) * 100) : null;
 
-  return (
-    <StyledProgressBar {...props} ref={forwardedRef} value={value} max={max}>
-      <ProgressBarIndicator style={{ transform: `translateX(${percentage}%)` }} />
-    </StyledProgressBar>
-  );
-});
+    return (
+      <StyledProgressBar {...props} ref={forwardedRef} value={value} max={max}>
+        <ProgressBarIndicator style={{ transform: `translateX(${percentage}%)` }} />
+      </StyledProgressBar>
+    );
+  },
+);

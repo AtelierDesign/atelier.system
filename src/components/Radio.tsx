@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled, CSS, VariantProps } from '../stitches.config';
+import { styled, CSS, VariantProps } from 'stitches.config';
 import * as RadioGroupPrimitive from '@radix-ui/react-radio-group';
 
 export const RadioGroup = styled(RadioGroupPrimitive.Root, {
@@ -87,10 +87,8 @@ type RadioVariants = VariantProps<typeof StyledRadio>;
 type RadioGroupItemPrimitiveProps = React.ComponentProps<typeof RadioGroupPrimitive.Item>;
 type RadioProps = RadioGroupItemPrimitiveProps & RadioVariants & { css?: CSS };
 
-export const Radio = React.forwardRef<React.ElementRef<typeof StyledRadio>, RadioProps>(
-  (props, forwardedRef) => (
-    <StyledRadio {...props} ref={forwardedRef}>
-      <StyledIndicator />
-    </StyledRadio>
-  )
-);
+export const Radio = React.forwardRef<React.ElementRef<typeof StyledRadio>, RadioProps>((props, forwardedRef) => (
+  <StyledRadio {...props} ref={forwardedRef}>
+    <StyledIndicator />
+  </StyledRadio>
+));

@@ -16,7 +16,7 @@ import {
   CheckIcon,
   TextAlignJustifyIcon,
 } from '@radix-ui/react-icons';
-import { darkTheme as darkThemeClassName, theme as lightThemeClassName } from '../stitches.config';
+import { darkTheme as darkThemeClassName, theme as lightThemeClassName } from 'stitches.config';
 import { colors, getHiContrast, loContrasts } from '../pages/colors';
 
 const steps = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];

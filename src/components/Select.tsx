@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled, CSS } from '../stitches.config';
+import { styled, CSS } from 'stitches.config';
 import { CaretSortIcon } from '@radix-ui/react-icons';
 
 const SelectWrapper = styled('div', {
@@ -54,7 +54,7 @@ export const Select = React.forwardRef<React.ElementRef<typeof StyledSelect>, Se
       <StyledSelect ref={forwardedRef} {...props} />
       <StyledCaretSortIcon />
     </SelectWrapper>
-  )
+  ),
 );
 
 Select.toString = () => `.${SelectWrapper.className}`;

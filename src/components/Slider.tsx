@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled, CSS } from '../stitches.config';
+import { styled, CSS } from 'stitches.config';
 import * as SliderPrimitive from '@radix-ui/react-slider';
 
 const SliderTrack = styled(SliderPrimitive.Track, {
@@ -90,22 +90,20 @@ export const StyledSlider = styled(SliderPrimitive.Root, {
 type SliderPrimitiveProps = React.ComponentProps<typeof SliderPrimitive.Root>;
 type SliderProps = SliderPrimitiveProps & { css?: CSS };
 
-export const Slider = React.forwardRef<React.ElementRef<typeof StyledSlider>, SliderProps>(
-  (props, forwardedRef) => {
-    const hasRange = Array.isArray(props.defaultValue || (props as any).value);
-    const thumbsArray = hasRange
-      ? props.defaultValue || (props as any).value
-      : [props.defaultValue || (props as any).value];
+export const Slider = React.forwardRef<React.ElementRef<typeof StyledSlider>, SliderProps>((props, forwardedRef) => {
+  const hasRange = Array.isArray(props.defaultValue || (props as any).value);
+  const thumbsArray = hasRange
+    ? props.defaultValue || (props as any).value
+    : [props.defaultValue || (props as any).value];
 
-    return (
-      <StyledSlider {...props} ref={forwardedRef}>
-        <SliderTrack>
-          <SliderRange />
-        </SliderTrack>
-        {thumbsArray.map((_: any, i: number) => (
-          <SliderThumb key={i} />
-        ))}
-      </StyledSlider>
-    );
-  }
-);
+  return (
+    <StyledSlider {...props} ref={forwardedRef}>
+      <SliderTrack>
+        <SliderRange />
+      </SliderTrack>
+      {thumbsArray.map((_: any, i: number) => (
+        <SliderThumb key={i} />
+      ))}
+    </StyledSlider>
+  );
+});

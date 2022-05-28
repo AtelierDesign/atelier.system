@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled, CSS, VariantProps } from '../stitches.config';
+import { styled, CSS, VariantProps } from 'stitches.config';
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
 import { CheckIcon } from '@radix-ui/react-icons';
 
@@ -76,5 +76,5 @@ export const Checkbox = React.forwardRef<React.ElementRef<typeof StyledCheckbox>
         <CheckIcon />
       </StyledIndicator>
     </StyledCheckbox>
-  )
+  ),
 );

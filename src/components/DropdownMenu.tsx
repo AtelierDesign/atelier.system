@@ -1,6 +1,6 @@
 import React, { ReactText } from 'react';
 import { CheckIcon } from '@radix-ui/react-icons';
-import { styled, CSS } from '../stitches.config';
+import { styled, CSS } from 'stitches.config';
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
 import { menuCss, separatorCss, itemCss, labelCss } from './Menu';
 import { Box } from './Box';
@@ -15,9 +15,7 @@ export const DropdownMenuItem = styled(DropdownMenuPrimitive.Item, itemCss);
 
 const StyledDropdownMenuRadioItem = styled(DropdownMenuPrimitive.RadioItem, itemCss);
 
-type DialogMenuRadioItemPrimitiveProps = React.ComponentProps<
-  typeof DropdownMenuPrimitive.RadioItem
->;
+type DialogMenuRadioItemPrimitiveProps = React.ComponentProps<typeof DropdownMenuPrimitive.RadioItem>;
 type DialogMenuRadioItemProps = DialogMenuRadioItemPrimitiveProps & { css?: CSS };
 
 export const DropdownMenuRadioItem = React.forwardRef<
@@ -45,9 +43,7 @@ export const DropdownMenuRadioItem = React.forwardRef<
 
 const StyledDropdownMenuCheckboxItem = styled(DropdownMenuPrimitive.CheckboxItem, itemCss);
 
-type DialogMenuCheckboxItemPrimitiveProps = React.ComponentProps<
-  typeof DropdownMenuPrimitive.CheckboxItem
->;
+type DialogMenuCheckboxItemPrimitiveProps = React.ComponentProps<typeof DropdownMenuPrimitive.CheckboxItem>;
 type DialogMenuCheckboxItemProps = DialogMenuCheckboxItemPrimitiveProps & { css?: CSS };
 
 export const DropdownMenuCheckboxItem = React.forwardRef<

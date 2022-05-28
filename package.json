@@ -30,16 +30,21 @@
     "@radix-ui/react-accordion": "^0.1.6",
     "@radix-ui/react-alert-dialog": "^0.1.7",
     "@radix-ui/react-avatar": "^0.1.4",
+    "@radix-ui/react-checkbox": "^0.1.5",
     "@radix-ui/react-dropdown-menu": "^0.1.6",
-    "@radix-ui/react-icons": "^1.1.0",
+    "@radix-ui/react-icons": "^1.1.1",
     "@radix-ui/react-menu": "^0.1.6",
     "@radix-ui/react-popover": "^0.1.6",
+    "@radix-ui/react-separator": "^0.1.4",
     "@radix-ui/react-switch": "^0.1.5",
     "@radix-ui/react-tabs": "^0.1.5",
     "@radix-ui/react-toggle": "^0.1.4",
     "@radix-ui/react-use-layout-effect": "^0.1.0",
     "@stitches/react": "^1.2.7",
-    "next": "^12.1.5"
+    "bezier-easing": "^2.1.0",
+    "chroma-js": "^2.4.2",
+    "next": "^12.1.6",
+    "react-bezier-curve-editor": "^1.1.2"
   },
   "devDependencies": {
     "@next/mdx": "^12.1.5",

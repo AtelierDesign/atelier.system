@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled, CSS } from '../stitches.config';
+import { styled, CSS } from 'stitches.config';
 import * as PopoverPrimitive from '@radix-ui/react-popover';
 import { Box } from './Box';
 import { panelStyles } from './Panel';
@@ -28,19 +28,18 @@ type PopoverContentProps = PopoverContentPrimitiveProps & {
   hideArrow?: boolean;
 };
 
-export const PopoverContent = React.forwardRef<
-  React.ElementRef<typeof StyledContent>,
-  PopoverContentProps
->(({ children, hideArrow, ...props }, fowardedRef) => (
-  <StyledContent sideOffset={0} {...props} ref={fowardedRef}>
-    {children}
-    {!hideArrow && (
-      <Box css={{ color: '$panel' }}>
-        <PopoverPrimitive.Arrow width={11} height={5} offset={5} style={{ fill: 'currentColor' }} />
-      </Box>
-    )}
-  </StyledContent>
-));
+export const PopoverContent = React.forwardRef<React.ElementRef<typeof StyledContent>, PopoverContentProps>(
+  ({ children, hideArrow, ...props }, fowardedRef) => (
+    <StyledContent sideOffset={0} {...props} ref={fowardedRef}>
+      {children}
+      {!hideArrow && (
+        <Box css={{ color: '$panel' }}>
+          <PopoverPrimitive.Arrow width={11} height={5} offset={5} style={{ fill: 'currentColor' }} />
+        </Box>
+      )}
+    </StyledContent>
+  ),
+);
 
 export const PopoverTrigger = PopoverPrimitive.Trigger;
 export const PopoverClose = PopoverPrimitive.Close;

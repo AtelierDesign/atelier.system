@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '../components/Button';
-import { darkTheme } from '../stitches.config';
+import { darkTheme } from 'stitches.config';
 
 export function DarkThemeButton() {
   const [theme, setTheme] = React.useState('theme-default');

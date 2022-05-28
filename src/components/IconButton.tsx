@@ -1,4 +1,4 @@
-import { styled } from '../stitches.config';
+import { styled } from 'stitches.config';
 
 export const IconButton = styled('button', {
   // Reset
@@ -87,18 +87,15 @@ export const IconButton = styled('button', {
         },
       },
       raised: {
-        boxShadow:
-          '0 0 transparent, 0 16px 32px hsl(206deg 12% 5% / 25%), 0 3px 5px hsl(0deg 0% 0% / 10%)',
+        boxShadow: '0 0 transparent, 0 16px 32px hsl(206deg 12% 5% / 25%), 0 3px 5px hsl(0deg 0% 0% / 10%)',
         '@hover': {
           '&:hover': {
-            boxShadow:
-              '0 0 transparent, 0 16px 32px hsl(206deg 12% 5% / 25%), 0 3px 5px hsl(0deg 0% 0% / 10%)',
+            boxShadow: '0 0 transparent, 0 16px 32px hsl(206deg 12% 5% / 25%), 0 3px 5px hsl(0deg 0% 0% / 10%)',
           },
         },
         '&:focus': {
           borderColor: '$slate8',
-          boxShadow:
-            '0 0 0 1px $colors$slate8, 0 16px 32px hsl(206deg 12% 5% / 25%), 0 3px 5px hsl(0deg 0% 0% / 10%)',
+          boxShadow: '0 0 0 1px $colors$slate8, 0 16px 32px hsl(206deg 12% 5% / 25%), 0 3px 5px hsl(0deg 0% 0% / 10%)',
         },
         '&:active': {
           backgroundColor: '$slate4',

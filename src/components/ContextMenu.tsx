@@ -1,6 +1,6 @@
 import React from 'react';
 import { CheckIcon } from '@radix-ui/react-icons';
-import { styled, CSS } from '../stitches.config';
+import { styled, CSS } from 'stitches.config';
 import * as ContextMenuPrimitive from '@radix-ui/react-context-menu';
 import { menuCss, separatorCss, itemCss, labelCss } from './Menu';
 import { Box } from './Box';
@@ -18,9 +18,7 @@ export const ContextMenuItem = styled(ContextMenuPrimitive.Item, itemCss);
 
 const StyledContextMenuRadioItem = styled(ContextMenuPrimitive.RadioItem, itemCss);
 
-type ContextMenuRadioItemPrimitiveProps = React.ComponentProps<
-  typeof ContextMenuPrimitive.RadioItem
->;
+type ContextMenuRadioItemPrimitiveProps = React.ComponentProps<typeof ContextMenuPrimitive.RadioItem>;
 type ContextMenuRadioItemProps = ContextMenuRadioItemPrimitiveProps & { css?: CSS };
 
 export const ContextMenuRadioItem = React.forwardRef<
@@ -48,9 +46,7 @@ export const ContextMenuRadioItem = React.forwardRef<
 
 const StyledContextMenuCheckboxItem = styled(ContextMenuPrimitive.CheckboxItem, itemCss);
 
-type ContextMenuCheckboxItemPrimitiveProps = React.ComponentProps<
-  typeof ContextMenuPrimitive.CheckboxItem
->;
+type ContextMenuCheckboxItemPrimitiveProps = React.ComponentProps<typeof ContextMenuPrimitive.CheckboxItem>;
 type ContextMenuCheckboxItemProps = ContextMenuCheckboxItemPrimitiveProps & { css?: CSS };
 
 export const ContextMenuCheckboxItem = React.forwardRef<
