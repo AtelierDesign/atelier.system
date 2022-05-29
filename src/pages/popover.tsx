@@ -1,11 +1,6 @@
 import * as React from 'react';
-import {
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverClose,
-  PopoverArrow,
-} from '@radix-ui/react-popover';
+import * as PopoverPrimitive from '@radix-ui/react-popover';
+import { Popover } from '../components/Popover';
 
 export default function PopoverPage() {
   return (
