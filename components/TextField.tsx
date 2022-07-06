@@ -36,8 +36,7 @@ export const TextField = styled('input', {
   '&:focus': {
     boxShadow: 'inset 0px 0px 0px 1px $colors$blue8, 0px 0px 0px 1px $colors$blue8',
     '&:-webkit-autofill': {
-      boxShadow:
-        'inset 0px 0px 0px 1px $colors$blue8, 0px 0px 0px 1px $colors$blue8, inset 0 0 0 100px $colors$blue3',
+      boxShadow: 'inset 0px 0px 0px 1px $colors$blue8, 0px 0px 0px 1px $colors$blue8, inset 0 0 0 100px $colors$blue3',
     },
   },
   '&::placeholder': {
@@ -59,6 +58,7 @@ export const TextField = styled('input', {
     },
   },
 
+  // VARIANTS
   variants: {
     size: {
       '1': {
@@ -79,6 +79,16 @@ export const TextField = styled('input', {
         lineHeight: '$sizes$6',
         '&:-webkit-autofill::first-line': {
           fontSize: '$3',
+        },
+      },
+      '3': {
+        borderRadius: '$2',
+        height: '48px',
+        fontSize: '15px',
+        px: '$2',
+        lineHeight: '48px',
+        '&:-webkit-autofill::first-line': {
+          fontSize: '15px',
         },
       },
     },

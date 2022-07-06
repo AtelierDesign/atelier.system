@@ -119,33 +119,35 @@ import { DarkThemeButton } from '@/custom/DarkThemeButton';
 function SystemPage() {
   return (
     <Box>
-      {/* <!-- THEME SWITCH --> */}
-      <DarkThemeButton />
+      {/* <!-- App Bar --> */}
+      <AppBar size="2" color="loContrast" border fixed glass>
+        <Text size="2" css={{ fontWeight: 'normal', textAlign: 'center', letterSpacing: '-0.03rem' }}>
+          <strong>ATELIER</strong>® DS
+        </Text>
+
+        {/* <!-- THEME SWITCH --> */}
+        <DarkThemeButton />
+      </AppBar>
 
       {/* <!-- Banner --> */}
-      <Banner id="banner" variant="blue" rounded>
+      <Banner id="banner" variant="lime">
         <Text size="2" css={{ fontWeight: 500 }}>
-          Atelier Design Yield® raises a $15M Series A.
+          Atelier Design Yield® – Example Banner
         </Text>
-        <Separator orientation="vertical" />
-        <Link variant="blue" href="#">
-          <Text size="2">Read the story</Text>
-        </Link>
-        <IconButton variant="ghost">
-          <Cross1Icon />
-        </IconButton>
       </Banner>
 
-      {/* <!-- App Bar --> */}
-      <AppBar size="2" color="loContrast" border sticky glass>
-        <Button>Button</Button>
-      </AppBar>
+      {/* <!-- COMPONENTS NAVIGATION --> */}
       <Box
         css={{
+          zIndex: '999',
           position: 'fixed',
-          top: '$7',
+          top: '$6',
           left: 0,
           bottom: 0,
+          backgroundColor: '$light100',
+          backdropFilter: 'blur(12px)',
+          WebkitBackdropFilter: 'blur(12px)',
+          saturate: '180%',
           overflowY: 'auto',
           width: 250,
           px: '$6',
@@ -153,16 +155,16 @@ function SystemPage() {
         }}
       >
         {/* <!-- SIDEBAR QUICK NAV --> */}
-        <Heading>Quick Nav</Heading>
+        <Heading css={{ fontWeight: '800' }}>Components</Heading>
         <Box
           as="ul"
           css={{
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)',
-            opacity: '0.6',
+            // backdropFilter: 'blur(10px)',
+            // WebkitBackdropFilter: 'blur(10px)',
+            // opacity: '0.6',
             padding: '15px',
             borderRadius: '10px',
-            backgroundColor: '$slate4',
+            // backgroundColor: '$slate4',
           }}
         >
           <Box css={{ my: '$1' }}>
@@ -420,11 +422,13 @@ function SystemPage() {
         </Box>
       </Box>
 
+      {/* <!-- END ! COMPONENTS NAVIGATION --> */}
+
       <Box css={{ bc: '$loContrast', height: '100%' }}>
         <Section size="3">
           <Container size="2">
             <Heading size="4" css={{ ta: 'center', mb: '$3' }}>
-              Atelier® UI Test Suite
+              Atelier® Design System
             </Heading>
             <Paragraph size="2" css={{ ta: 'center' }}>
               An environment for testing Atelier® DS.
@@ -1321,11 +1325,16 @@ function SystemPage() {
         <Section size="3">
           <Container size="2">
             <Heading id="TextField" css={{ mb: '$6', scrollMarginTop: '$7' }}>
-              TextField
+              TextField ( Inputs )
             </Heading>
-            <Flex css={{ ai: 'flex-start', gap: '$6' }}>
+            <Flex css={{ ai: 'flex-start', gap: '$6', padding: '12px' }}>
               <TextField size="1" placeholder="Size 1" />
+            </Flex>
+            <Flex css={{ ai: 'flex-start', gap: '$6', padding: '12px' }}>
               <TextField size="2" placeholder="Size 2" />
+            </Flex>
+            <Flex css={{ ai: 'flex-start', gap: '$6', padding: '12px' }}>
+              <TextField size="3" placeholder="Size 3" />
             </Flex>
             <Flex css={{ ai: 'flex-start', gap: '$6', mt: '$6' }}>
               <TextField size="1" placeholder="Ghost" variant="ghost" />

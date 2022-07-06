@@ -1,8 +1,9 @@
 import { styled } from 'stitches.config';
 
 export const Banner = styled('div', {
-  // Reset
+  zIndex: '9999',
   boxSizing: 'border-box',
+  position: 'relative',
   '&::before': {
     boxSizing: 'border-box',
   },
@@ -18,7 +19,7 @@ export const Banner = styled('div', {
   variants: {
     size: {
       '1': {
-        py: '$1',
+        py: '$2',
         px: '$4',
       },
     },
@@ -28,6 +29,9 @@ export const Banner = styled('div', {
       },
       gray: {
         backgroundColor: '$slate3',
+      },
+      lime: {
+        backgroundColor: '$lime5',
       },
       blue: {
         backgroundColor: '$blue3',

@@ -12,7 +12,8 @@ export function DarkThemeButton() {
 
   return (
     <Button
-      style={{ position: 'fixed', zIndex: 999, right: 15, top: 15 }}
+      variant="ghostAtelier"
+      style={{ position: 'absolute', top: 4, right: 12, zIndex: 9999 }}
       onClick={() => setTheme(theme === 'theme-default' ? darkTheme : 'theme-default')}
     >
       Toggle theme

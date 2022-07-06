@@ -182,6 +182,10 @@ export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes
       ...whiteA,
       ...blackA,
 
+      light100: 'rgba(240, 240, 240, 0.7)',
+      light50: 'rgba(240, 240, 240, 0.8)',
+      clear100: 'rgba(240, 240, 240, 0.2)',
+
       // Semantic colors
       hiContrast: '$slate12',
       // loContrast: '$slate1',
@@ -465,6 +469,9 @@ export const darkTheme = createTheme('dark-theme', {
     ...brownDarkA,
     ...bronzeDarkA,
     ...goldDarkA,
+
+    light100: 'rgba(0, 0, 0, 0.4)',
+    light50: 'rgba(0, 0, 0, 0.8)',
 
     // Semantic colors
     hiContrast: '$slate12',

@@ -16,6 +16,17 @@ export const AppBar = styled('div', {
         py: '$3',
       },
     },
+    fixed: {
+      true: {
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        width: '100%',
+        paddingLeft: '12px',
+        paddingRight: '12px',
+      },
+    },
     sticky: {
       true: {
         position: 'sticky',
@@ -26,7 +37,10 @@ export const AppBar = styled('div', {
     },
     glass: {
       true: {
-        backdropFilter: 'blur(12px) saturate(160%)',
+        backgroundColor: '$light100',
+        backdropFilter: 'blur(5px)',
+        WebkitBackdropFilter: 'blur(5px)',
+        saturate: '180%',
       },
     },
     border: {
