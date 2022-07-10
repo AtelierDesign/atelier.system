@@ -1,17 +1,8 @@
 import React from 'react';
-import { Button } from '@/components/Button';
+/*
 import { IconButton } from '@/components/IconButton';
-import { Container } from '@/components/Container';
-import { Box } from '@/components/Box';
-import { Flex } from '@/components/Flex';
-import { Grid } from '@/components/Grid';
-import { Badge } from '@/components/Badge';
 import { Switch } from '@/components/Switch';
 import { ControlGroup } from '@/components/ControlGroup';
-import { Text } from '@/components/Text';
-import { Link } from '@/components/Link';
-import { AppBar } from '@/components/AppBar';
-import { Banner } from '@/components/Banner';
 import { Alert } from '@/components/Alert';
 import { Kbd } from '@/components/Kbd';
 import { Separator } from '@/components/Separator';
@@ -22,10 +13,7 @@ import { Select } from '@/components/Select';
 import { TextArea } from '@/components/TextArea';
 import { Image } from '@/components/Image';
 import { Code } from '@/components/Code';
-import { Sup } from '@/components/Sup';
-import { Sub } from '@/components/Sub';
 import { TextField } from '@/components/TextField';
-import { Section } from '@/components/Section';
 import { Avatar } from '@/components/Avatar';
 import { TabLink } from '@/components/TabLink';
 import { SimpleToggle } from '@/components/SimpleToggle';
@@ -51,9 +39,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/Tabs';
 import { Label } from '@/components/Label';
 import { Skeleton } from '@/components/Skeleton';
 import { RadioCardGroup, RadioCard } from '@/components/RadioCard';
-import { Accordion, AccordionTrigger, AccordionItem, AccordionContent } from '@/components/Accordion';
-import { Heading } from '@/components/Heading';
-import { Paragraph } from '@/components/Paragraph';
+
 // import { Color } from '@/custom/Color';
 import { Avatars } from '@/custom/Avatars';
 import { Kbds } from '@/custom/Kbds';
@@ -114,10 +100,28 @@ import {
   RocketIcon,
 } from '@radix-ui/react-icons';
 import { Toolbar } from '@/custom/Toolbar';
-import { DarkThemeButton } from '@/custom/DarkThemeButton';
+
+*/
 
 import { QuickNav } from '@/custom/QuickNav';
-import { AtelierAccordion } from '@/components/AtelierAccordion';
+import { Box } from '@/components/Box';
+import { Flex } from '@/components/Flex';
+import { Grid } from '@/components/Grid';
+import { Badge } from '@/components/Badge';
+import { Section } from '@/components/Section';
+import { Button } from '@/components/Button';
+import { Container } from '@/components/Container';
+import { Heading } from '@/components/Heading';
+import { Text } from '@/components/Text';
+import { Link } from '@/components/Link';
+import { Paragraph } from '@/components/Paragraph';
+import { Sup } from '@/components/Sup';
+import { Sub } from '@/components/Sub';
+import { AppBar } from '@/components/AppBar';
+import { Banner } from '@/components/Banner';
+import { DarkThemeButton } from '@/custom/DarkThemeButton';
+// import { AtelierAccordion } from '@/components/AtelierAccordion';
+import { AtelierAccordion, AccordionTrigger, AccordionItem, AccordionContent } from '@/components/Accordion';
 
 function DesignSystem() {
   return (
@@ -164,7 +168,7 @@ function DesignSystem() {
         <Box css={{ bc: '$loContrast' }}>
           <Section size="3">
             <Container size="2">
-              <Heading size="1" css={{ ta: 'center', mb: '$3', fontWeight: 'bold' }}>
+              <Heading size="1" id="color" css={{ ta: 'center', mb: '$3', fontWeight: 'bold' }}>
                 # Color System
               </Heading>
             </Container>
@@ -253,21 +257,31 @@ function DesignSystem() {
         </Box>
         {/* <!-- END !  TYPOGRAPHY --> */}
 
-        {/* <!-- BEGIN TYPOGRAPHY --> */}
+        {/* <!-- BEGIN ! Accordion --> */}
         <Box css={{ bc: '$loContrast' }}>
           <Section size="3">
             <Container size="2">
-              <Heading size="1" css={{ ta: 'center', mb: '$3', fontWeight: 'bold' }}>
+              <Heading size="1" id="accordion" css={{ ta: 'center', mb: '$3', fontWeight: 'bold' }}>
                 # Accordion Component
               </Heading>
             </Container>
 
             <Container size="2" css={{ marginBottom: '10px' }}>
-              <AtelierAccordion />
+              <AtelierAccordion type="single" collapsible>
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>Something</AccordionTrigger>
+                  <AccordionContent>.......</AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>Something</AccordionTrigger>
+                  <AccordionContent>.....</AccordionContent>
+                </AccordionItem>
+              </AtelierAccordion>
             </Container>
           </Section>
         </Box>
-        {/* <!-- END !  TYPOGRAPHY --> */}
+        {/* <!-- END ! Accordion --> */}
       </Box>
     </>
   );

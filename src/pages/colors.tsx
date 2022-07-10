@@ -26,8 +26,10 @@ import { TextField } from '../components/TextField';
 import { TreeItem } from '../components/TreeItem';
 import { ColorTools } from '../custom/ColorTools';
 import { darkTheme as darkThemeClassName } from 'stitches.config';
+import { DarkThemeButton } from '@/custom/DarkThemeButton';
+import { AppBar } from '@/components/AppBar';
 
-const sidebarWidth = 240;
+const sidebarWidth = 0;
 
 export const loContrasts = ['lime', 'yellow', 'amber', 'sky', 'mint'];
 
@@ -104,73 +106,85 @@ export default function Colors() {
 
   return (
     <>
-      <Section size="3" css={{ py: '$7', ml: sidebarWidth, overflowY: 'scroll', height: '100vh' }}>
-        <Container size="3" css={{ mb: '$5' }}>
-          <Box>
-            <Checkbox defaultChecked={palette} onChange={e => setPalette(e.target.checked)}>
-              Palette
-            </Checkbox>
-            <Checkbox defaultChecked={layers} onChange={e => setLayers(e.target.checked)}>
-              Layers
-            </Checkbox>
-            <Checkbox defaultChecked={layersAlpha} onChange={e => setLayersAlpha(e.target.checked)}>
-              Layers (Alpha)
-            </Checkbox>
-            <Checkbox defaultChecked={buttons} onChange={e => setButtons(e.target.checked)}>
-              Buttons
-            </Checkbox>
-            <Checkbox defaultChecked={lines} onChange={e => setLines(e.target.checked)}>
-              Lines
-            </Checkbox>
-            <Checkbox defaultChecked={linesAlpha} onChange={e => setLinesAlpha(e.target.checked)}>
-              Lines (Alpha)
-            </Checkbox>
-            <Checkbox defaultChecked={alerts} onChange={e => setAlerts(e.target.checked)}>
-              Alerts
-            </Checkbox>
-            <Checkbox defaultChecked={alertsAlpha} onChange={e => setAlertsAlpha(e.target.checked)}>
-              Alerts (Alpha)
-            </Checkbox>
-            <Checkbox defaultChecked={textBlocks} onChange={e => setTextBlocks(e.target.checked)}>
-              Text Blocks
-            </Checkbox>
-            <Separator css={{ my: '$3' }} />
-            <Checkbox defaultChecked={grayscale} onChange={e => setGrayscale(e.target.checked)}>
-              Grayscale
-            </Checkbox>
-            <Checkbox defaultChecked={gap} onChange={e => setGap(e.target.checked)}>
-              Gaps
-            </Checkbox>
-            <Checkbox defaultChecked={blur} onChange={e => setBlur(e.target.checked)}>
-              Blur
-            </Checkbox>
-            <Checkbox defaultChecked={darkTheme} onChange={e => setDarkTheme(e.target.checked)}>
-              Dark theme
-            </Checkbox>
-            <Separator css={{ my: '$3' }} />
-            <Checkbox data-alpha-scales defaultChecked={alphaScales} onChange={e => setAlphaScales(e.target.checked)}>
-              Show alpha scales
-            </Checkbox>
-          </Box>
-        </Container>
+      <Box css={{ backgroundColor: '$gray1', maxWidth: '100vw' }}>
+        {/* <!-- App Bar --> */}
+        <AppBar size="2" color="loContrast" border fixed glass>
+          <Text size="2" css={{ fontWeight: 'normal', textAlign: 'center', letterSpacing: '-0.03rem' }}>
+            <strong>ATELIER</strong>® DS
+          </Text>
 
-        <div style={{ filter: blur ? 'blur(20px)' : undefined }}>
-          {palette && <Palette showAlphaScales={alphaScales} />}
-          {layers && <Layers />}
-          {layersAlpha && <LayersAlpha />}
-          {buttons && <Buttons />}
-          {lines && <Lines />}
-          {linesAlpha && <LinesAlpha />}
-          {alerts && <Alerts />}
-          {alertsAlpha && <AlertsAlpha />}
-          {textBlocks && <TextBlocks />}
-        </div>
-      </Section>
-      <Sidebar />
+          {/* <!-- THEME SWITCH --> */}
+          <DarkThemeButton />
+        </AppBar>
+        <Section size="3" css={{ py: '$7', ml: sidebarWidth, overflowY: 'scroll', height: '100vh' }}>
+          <Container size="3" css={{ mb: '$5' }}>
+            <Box>
+              <Checkbox defaultChecked={palette} onChange={e => setPalette(e.target.checked)}>
+                Palette
+              </Checkbox>
+              <Checkbox defaultChecked={layers} onChange={e => setLayers(e.target.checked)}>
+                Layers
+              </Checkbox>
+              <Checkbox defaultChecked={layersAlpha} onChange={e => setLayersAlpha(e.target.checked)}>
+                Layers (Alpha)
+              </Checkbox>
+              <Checkbox defaultChecked={buttons} onChange={e => setButtons(e.target.checked)}>
+                Buttons
+              </Checkbox>
+              <Checkbox defaultChecked={lines} onChange={e => setLines(e.target.checked)}>
+                Lines
+              </Checkbox>
+              <Checkbox defaultChecked={linesAlpha} onChange={e => setLinesAlpha(e.target.checked)}>
+                Lines (Alpha)
+              </Checkbox>
+              <Checkbox defaultChecked={alerts} onChange={e => setAlerts(e.target.checked)}>
+                Alerts
+              </Checkbox>
+              <Checkbox defaultChecked={alertsAlpha} onChange={e => setAlertsAlpha(e.target.checked)}>
+                Alerts (Alpha)
+              </Checkbox>
+              <Checkbox defaultChecked={textBlocks} onChange={e => setTextBlocks(e.target.checked)}>
+                Text Blocks
+              </Checkbox>
+              <Separator css={{ my: '$3' }} />
+              <Checkbox defaultChecked={grayscale} onChange={e => setGrayscale(e.target.checked)}>
+                Grayscale
+              </Checkbox>
+              <Checkbox defaultChecked={gap} onChange={e => setGap(e.target.checked)}>
+                Gaps
+              </Checkbox>
+              <Checkbox defaultChecked={blur} onChange={e => setBlur(e.target.checked)}>
+                Blur
+              </Checkbox>
+              <Checkbox defaultChecked={darkTheme} onChange={e => setDarkTheme(e.target.checked)}>
+                Dark theme
+              </Checkbox>
+              <Separator css={{ my: '$3' }} />
+              <Checkbox data-alpha-scales defaultChecked={alphaScales} onChange={e => setAlphaScales(e.target.checked)}>
+                Show alpha scales
+              </Checkbox>
+            </Box>
+          </Container>
+
+          <div style={{ filter: blur ? 'blur(20px)' : undefined }}>
+            {palette && <Palette showAlphaScales={alphaScales} />}
+            {layers && <Layers />}
+            {layersAlpha && <LayersAlpha />}
+            {buttons && <Buttons />}
+            {lines && <Lines />}
+            {linesAlpha && <LinesAlpha />}
+            {alerts && <Alerts />}
+            {alertsAlpha && <AlertsAlpha />}
+            {textBlocks && <TextBlocks />}
+          </div>
+        </Section>
+        {/* <!-- Hold <Sidebar /> --> */}
+      </Box>
     </>
   );
 }
 
+/*
 function Sidebar() {
   return (
     <Box
@@ -190,6 +204,7 @@ function Sidebar() {
     </Box>
   );
 }
+*/
 
 function Layers() {
   return (

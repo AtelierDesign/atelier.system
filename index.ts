@@ -1,6 +1,20 @@
-export { Accordion, AccordionTrigger, AccordionItem, AccordionContent } from './components/Accordion';
-export { AtelierAccordion } from './componenents/AtelierAccordion';
-export { Alert } from './components/Alert';
+export { AtelierAccordion, AccordionTrigger, AccordionItem, AccordionContent } from './src/components/Accordion';
+export { Alert } from './src/components/Alert';
+export { AppBar } from './src/components/AppBar';
+export { AspectRatio } from '@radix-ui/react-aspect-ratio';
+export { Badge } from './src/components/Badge';
+export { Banner } from './src/components/Banner';
+export { Box } from './src/components/Box';
+export { Button } from './src/components/Button';
+export { Card } from './src/components/Card';
+export { Checkbox } from './src/components/Checkbox';
+export { Code } from './src/components/Code';
+export { Container } from './src/components/Container';
+
+/*
+
+// Developing...
+
 export {
   AlertDialog,
   AlertDialogAction,
@@ -9,17 +23,8 @@ export {
   AlertDialogDescription,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from './components/AlertDialog';
+} from '@/components/AlertDialog';
 export { Avatar, AvatarGroup, AvatarNestedItem } from './components/Avatar';
-export { AspectRatio } from '@radix-ui/react-aspect-ratio';
-export { Badge } from './components/Badge';
-export { Banner } from './components/Banner';
-export { Box } from './components/Box';
-export { Button } from './components/Button';
-export { Card } from './components/Card';
-export { Checkbox } from './components/Checkbox';
-export { Code } from './components/Code';
-export { Container } from './components/Container';
 export {
   ContextMenu,
   ContextMenuTrigger,
@@ -69,8 +74,6 @@ export { Overlay } from './components/Overlay';
 export { Paragraph } from './components/Paragraph';
 export { Panel } from './components/Panel';
 export { Popover, PopoverClose, PopoverContent, PopoverTrigger } from './components/Popover';
-// TODO
-// export { Scrollbar } from './components/Scrollbar';
 export { Portal } from '@radix-ui/react-portal';
 export { ProgressBar } from './components/ProgressBar';
 export { Radio, RadioGroup } from './components/Radio';
@@ -94,6 +97,11 @@ export { TextArea } from './components/TextArea';
 export { Tooltip } from './components/Tooltip';
 export { TreeItem } from './components/TreeItem';
 export { VerifiedBadge } from './components/VerifiedBadge';
+
+*/
+
+// TODO
+// export { Scrollbar } from './components/Scrollbar';
 
 // Stitches
 export {

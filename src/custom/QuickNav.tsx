@@ -1,5 +1,5 @@
-import Link from 'next/link';
-
+// import Link from 'next/link';
+import { Link } from '@/components/Link';
 import { Box } from '@/components/Box';
 import { Heading } from '@/components/Heading';
 import { Text } from '@/components/Text';
@@ -127,6 +127,13 @@ export const QuickNav = () => {
             <Link href="#controlgroup" variant="subtle" css={{ display: 'inline-flex' }}>
               <Text size="2" css={{ lineHeight: '20px' }}>
                 Control Group
+              </Text>
+            </Link>
+          </Box>
+          <Box css={{ my: '$1' }}>
+            <Link href="#color" variant="subtle" css={{ display: 'inline-flex' }}>
+              <Text size="2" css={{ lineHeight: '20px' }}>
+                Color System
               </Text>
             </Link>
           </Box>

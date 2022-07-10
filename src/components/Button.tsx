@@ -144,6 +144,19 @@ export const Button = styled('button', {
           boxShadow: 'inset 0 0 0 1px $colors$red8',
         },
       },
+      ghostAtelier: {
+        backgroundColor: 'transparent',
+        color: '$mauve12',
+        '&:hover': {
+          backgroundColor: '$mauve6',
+        },
+        '&:active': {
+          backgroundColor: 'hsla(0,100%,100%,.3)',
+        },
+        '&:focus': {
+          boxShadow: 'inset 0 0 0 1px hsla(0,100%,100%,.35), 0 0 0 1px hsla(0,100%,100%,.35)',
+        },
+      },
       transparentWhite: {
         backgroundColor: 'hsla(0,100%,100%,.2)',
         color: 'white',

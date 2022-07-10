@@ -1,18 +1,35 @@
 import React from 'react';
-import { styled, CSS } from 'stitches.config';
+import { styled, CSS } from '../../stitches.config';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 import { ChevronDownIcon } from '@radix-ui/react-icons';
 
-const StyledAccordion = styled(AccordionPrimitive.Root, {});
+const AccordionContainer = styled('div', {
+  backgroundColor: '$translucent',
+  width: '100%',
+  alignItems: 'center',
+  margin: 'auto',
+  paddingLeft: '10px',
+  paddingRight: '10px',
+});
+
+const StyledAccordion = styled(AccordionPrimitive.Root, {
+  border: '3px solid $slate6',
+  borderRadius: '19px',
+  width: '100%',
+  backgroundColor: '$translucent',
+  boxShadow: '0 2px 8px $blackA4',
+});
 
 type AccordionPrimitiveProps = React.ComponentProps<typeof AccordionPrimitive.Root>;
 type AccordionProps = AccordionPrimitiveProps & { css?: CSS };
 
-export const Accordion = React.forwardRef<React.ElementRef<typeof StyledAccordion>, AccordionProps>(
+export const AtelierAccordion = React.forwardRef<React.ElementRef<typeof StyledAccordion>, AccordionProps>(
   ({ children, ...props }, forwardedRef) => (
-    <StyledAccordion ref={forwardedRef} {...props} {...(props.type === 'single' ? { collapsible: true } : {})}>
-      {children}
-    </StyledAccordion>
+    <AccordionContainer>
+      <StyledAccordion ref={forwardedRef} {...props} {...(props.type === 'single' ? { collapsible: true } : {})}>
+        {children}
+      </StyledAccordion>
+    </AccordionContainer>
   ),
 );
 
@@ -67,7 +84,13 @@ const StyledTrigger = styled(AccordionPrimitive.Trigger, {
   width: '100%',
 
   '&[data-state="closed"]': { backgroundColor: '$slate1' },
-  '&[data-state="open"]': { backgroundColor: '$slate3' },
+  '&[data-state="open"]': {
+    backgroundColor: '$slate3',
+    svg: {
+      transform: 'rotate(180deg)',
+    },
+  },
+
   '&:hover': { backgroundColor: '$slate5' },
 
   '&::before': {
@@ -76,22 +99,12 @@ const StyledTrigger = styled(AccordionPrimitive.Trigger, {
   '&::after': {
     boxSizing: 'border-box',
   },
-  '@hover': {
-    '&:hover': {
-      backgroundColor: '$slate2',
-    },
-  },
   '&:focus': {
     outline: 'none',
     boxShadow: 'inset 0 0 0 1px $colors$slate8, 0 0 0 1px $colors$slate8',
   },
   svg: {
     transition: 'transform 175ms cubic-bezier(0.65, 0, 0.35, 1)',
-  },
-  '&[data-state="open"]': {
-    svg: {
-      transform: 'rotate(180deg)',
-    },
   },
 });
 
@@ -109,9 +122,65 @@ export const AccordionTrigger = React.forwardRef<React.ElementRef<typeof StyledT
   ),
 );
 
+// Dropdown Styles
 const StyledContent = styled(AccordionPrimitive.Content, {
-  p: '$2',
+  overflow: 'hidden',
+  color: '$gray12',
+  backgroundColor: '$slate1',
+  fontSize: '13px',
+  paddingLeft: '20px',
+  paddingRight: '20px',
+  paddingTop: '4px',
+  paddingBottom: '20px',
+
+  '&[data-state="open"]': {
+    // animation: `${slideDown} 300ms cubic-bezier(0.87, 0, 0.13, 1)`,
+  },
+  '&[data-state="closed"]': {
+    // animation: `${slideUp} 300ms cubic-bezier(0.87, 0, 0.13, 1)`,
+  },
 });
 
 export const AccordionItem = StyledItem;
 export const AccordionContent = StyledContent;
+
+/*
+!! All exports...
+* AtelierAccordion
+* AccordionTrigger
+* AccordionItem
+* AccordionContent
+*/
+
+/*
+!! Render as follows...
+
+import React from 'react'
+import {
+  AtelierAccordion,
+  AccordionTrigger,
+  AccordionItem,
+  AccordionContent
+} from '@atelier.design'
+
+
+export const AccordionComponent = () => {
+  return(
+    <>
+      <AtelierAccordion type="single" collapsible>
+
+        <AccordionItem value="item-1">
+          <AccordionTrigger>...</AccordionTrigger>
+          <AccordionContent>....</AccordionContent>
+        </AccordionItem>
+
+        <AccordionItem value="item-2">
+          <AccordionTrigger>...</AccordionTrigger>
+          <AccordionContent>....</AccordionContent>
+        </AccordionItem>
+
+      </AtelierAccordion>
+    </>
+  );
+};
+*/

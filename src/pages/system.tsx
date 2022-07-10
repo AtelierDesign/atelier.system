@@ -51,7 +51,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/Tabs';
 import { Label } from '@/components/Label';
 import { Skeleton } from '@/components/Skeleton';
 import { RadioCardGroup, RadioCard } from '@/components/RadioCard';
-import { Accordion, AccordionTrigger, AccordionItem, AccordionContent } from '@/components/Accordion';
+import { AtelierAccordion, AccordionTrigger, AccordionItem, AccordionContent } from '@/components/Accordion';
 import { Heading } from '@/components/Heading';
 import { Paragraph } from '@/components/Paragraph';
 // import { Color } from '@/custom/Color';
@@ -1919,7 +1919,7 @@ function SystemPage() {
             <Heading id="accordion" css={{ mb: '$6', scrollMarginTop: '$7' }}>
               Accordion
             </Heading>
-            <Accordion type="single">
+            <AtelierAccordion type="single">
               <AccordionItem value="accordion-one">
                 <AccordionTrigger>
                   <Text size="3" css={{ fontWeight: 500 }}>
@@ -1980,7 +1980,7 @@ function SystemPage() {
                   </Text>
                 </AccordionContent>
               </AccordionItem>
-            </Accordion>
+            </AtelierAccordion>
           </Container>
         </Section>
         <Flex css={{ jc: 'center' }}>
