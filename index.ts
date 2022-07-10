@@ -1,4 +1,5 @@
 export { Accordion, AccordionTrigger, AccordionItem, AccordionContent } from './components/Accordion';
+export { AtelierAccordion } from './componenents/AtelierAccordion';
 export { Alert } from './components/Alert';
 export {
   AlertDialog,

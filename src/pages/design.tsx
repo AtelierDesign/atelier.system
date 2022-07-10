@@ -117,6 +117,7 @@ import { Toolbar } from '@/custom/Toolbar';
 import { DarkThemeButton } from '@/custom/DarkThemeButton';
 
 import { QuickNav } from '@/custom/QuickNav';
+import { AtelierAccordion } from '@/components/AtelierAccordion';
 
 function DesignSystem() {
   return (
@@ -247,6 +248,22 @@ function DesignSystem() {
                   paragraph of text, to demonstrate prose text.<Sub>1</Sub>
                 </Paragraph>
               </Flex>
+            </Container>
+          </Section>
+        </Box>
+        {/* <!-- END !  TYPOGRAPHY --> */}
+
+        {/* <!-- BEGIN TYPOGRAPHY --> */}
+        <Box css={{ bc: '$loContrast' }}>
+          <Section size="3">
+            <Container size="2">
+              <Heading size="1" css={{ ta: 'center', mb: '$3', fontWeight: 'bold' }}>
+                # Accordion Component
+              </Heading>
+            </Container>
+
+            <Container size="2" css={{ marginBottom: '10px' }}>
+              <AtelierAccordion />
             </Container>
           </Section>
         </Box>
