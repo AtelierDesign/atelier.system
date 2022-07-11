@@ -104,14 +104,4 @@ export { VerifiedBadge } from './components/VerifiedBadge';
 // export { Scrollbar } from './components/Scrollbar';
 
 // Stitches
-export {
-  styled,
-  css,
-  theme,
-  createTheme,
-  darkTheme,
-  getCssText,
-  globalCss,
-  keyframes,
-  config,
-} from './stitches.config';
+export { styled, css, theme, createTheme, darkTheme, getCssText, globalCss, keyframes, config } from 'stitches.config';
