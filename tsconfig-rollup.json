@@ -13,7 +13,15 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
-    "target": "es5"
+    "target": "es5",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/custom/*": ["./src/custom/*"],
+      "@/globals/*": ["./src/globals/*"],
+      "@*": ["../*"]
+    }
   },
   "exclude": ["node_modules", "pages"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]

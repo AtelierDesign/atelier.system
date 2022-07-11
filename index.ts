@@ -1,15 +1,13 @@
-export { AtelierAccordion, AccordionTrigger, AccordionItem, AccordionContent } from './src/components/Accordion';
-export { Alert } from './src/components/Alert';
-export { AppBar } from './src/components/AppBar';
-export { AspectRatio } from '@radix-ui/react-aspect-ratio';
-export { Badge } from './src/components/Badge';
-export { Banner } from './src/components/Banner';
-export { Box } from './src/components/Box';
-export { Button } from './src/components/Button';
-export { Card } from './src/components/Card';
-export { Checkbox } from './src/components/Checkbox';
-export { Code } from './src/components/Code';
-export { Container } from './src/components/Container';
+export { AtelierAccordion, AccordionTrigger, AccordionItem, AccordionContent } from '@/components/Accordion';
+export { Alert } from '@/components/Alert';
+export { AppBar } from '@/components/AppBar';
+export { Badge } from '@/components/Badge';
+export { Banner } from '@/components/Banner';
+export { Box } from '@/components/Box';
+export { Button } from '@/components/Button';
+export { Card } from '@/components/Card';
+export { Code } from '@/components/Code';
+export { Container } from '@/components/Container';
 
 /*
 
@@ -25,6 +23,7 @@ export {
   AlertDialogTrigger,
 } from '@/components/AlertDialog';
 export { Avatar, AvatarGroup, AvatarNestedItem } from './components/Avatar';
+export { AspectRatio } from '@radix-ui/react-aspect-ratio';
 export {
   ContextMenu,
   ContextMenuTrigger,
@@ -38,6 +37,7 @@ export {
   ContextMenuSeparator,
 } from './components/ContextMenu';
 export { ControlGroup } from './components/ControlGroup';
+export { Checkbox } from '@/components/Checkbox';
 export { DesignSystemProvider } from './components/DesignSystemProvider';
 export { Dialog, DialogClose, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from './components/Dialog';
 export {
